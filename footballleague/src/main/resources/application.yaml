@@ -4,7 +4,7 @@ spring:
   profiles: default
 server: 
  contextPath: /api  
- port: 8081
+ port: 8080
 api:
  url: https://apifootball.com/api/
  countryaction: get_countries
@@ -15,6 +15,6 @@ spring:
   profiles: dev
 server: 
  contextPath: /api 
- port: 8081
+ port: 8080
 api:
  url: https://apifootball.com/api/?action=get_countries&APIkey=9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978
