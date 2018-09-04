@@ -8,7 +8,7 @@
 
 	$.ajax({
             type: "GET",
-            url: "http://localhost:8081/countries",
+            url: "http://ec2-18-216-201-89.us-east-2.compute.amazonaws.com:8080/countries",
             success: function(data)
             {	           	
                 helpers.buildDropdown(
@@ -42,7 +42,7 @@
     	var selected = $('#countrydropdown option:selected').val();
         $.ajax({
         	 type: "GET",
-             url: "http://localhost:8081//countries/"+selected+"/leagues",
+             url: "http://ec2-18-216-201-89.us-east-2.compute.amazonaws.com:8080//countries/"+selected+"/leagues",
             success: function(data)
                     {
                        /*  $.each(data, function (){
@@ -76,7 +76,7 @@
     	var selected = $('#leaguedropdown option:selected').val();
         $.ajax({
         	 type: "GET",
-             url: "http://localhost:8081/leagues/"+selected+"/teams",
+             url: "http://ec2-18-216-201-89.us-east-2.compute.amazonaws.com:8080/leagues/"+selected+"/teams",
             success: function(data)
                     {
                        /*  $.each(data, function (){
@@ -112,7 +112,7 @@
     	var team = $('#teamdropdown option:selected').text()
         $.ajax({
         	 type: "GET",
-             url: "http://localhost:8081/countries/"+countryId+"/leagues/"+leagueId+"/teams/"+team+"/standing",
+             url: "http://ec2-18-216-201-89.us-east-2.compute.amazonaws.com:8080/countries/"+countryId+"/leagues/"+leagueId+"/teams/"+team+"/standing",
             success: function(data)
                     {
                        /*  $.each(data, function (){
@@ -156,7 +156,7 @@
    </tr>
     <tr>
        <td> </td>
-       <td><input type="button" value="Get Standing" onclick="GetStanding()"/></td>
+       <td><input type="button" id="getstanding" value="Get Standing" onclick="GetStanding()"/></td>
    </tr>
    </table>
    <div id="result"></div>
